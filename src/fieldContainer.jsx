@@ -15,7 +15,7 @@ export default (ComposedComponent) => {
     getValues(data) {
       if (typeof data === "object" && data !== null) {
         return _.mapValues(data, (field) => {
-          if (field.data) {
+          if (typeof field.data !== "undefined") {
             return this.getValues(field.data);
           } else {
             return field;
