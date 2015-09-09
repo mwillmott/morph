@@ -21,7 +21,7 @@ class TextField extends Component {
   }
 
   render() {
-    const { id, label, ...props } = this.props;
+    const { id, label, isValid, errors, ...props } = this.props;
 
     return (
       <div>
@@ -34,7 +34,10 @@ class TextField extends Component {
           ref="input"
           id={id}
           type="text"
-          onChange={this.onChange.bind(this)} />
+          onChange={this.onChange.bind(this)}
+          onBlur={this.onChange.bind(this)} />
+        {!isValid && errors &&
+          <span>{errors}</span>}
       </div>
     );
   }

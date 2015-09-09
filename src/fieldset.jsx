@@ -48,7 +48,7 @@ class Fieldset extends Component {
   }
 
   render() {
-    const { label, children } = this.props;
+    const { label, children, errors, isValid } = this.props;
 
     return (
       <fieldset>
@@ -56,6 +56,9 @@ class Fieldset extends Component {
           <label>{label}</label>}
 
         {this.traverseChildren(children)}
+
+        {!isValid && errors &&
+          <span>{errors}</span>}
       </fieldset>
     );
   }
