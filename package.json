@@ -1,6 +1,6 @@
 {
   "name": "morph-forms",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of React components for building amazing forms that handle state beautifully.",
   "author": "Michael Willmott",
   "license": "MIT",
